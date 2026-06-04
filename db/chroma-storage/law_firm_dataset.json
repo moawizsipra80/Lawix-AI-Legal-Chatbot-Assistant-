@@ -1,0 +1,182 @@
+[
+  {
+    "id": "doc_001",
+    "title": "Standard Mutual Non-Disclosure Agreement (NDA)",
+    "category": "Contracts & Agreements",
+    "content": "This Mutual Non-Disclosure Agreement ('Agreement') is entered into by and between the parties to protect confidential information shared for the purpose of exploring a potential business relationship. 'Confidential Information' refers to any proprietary information, technical data, trade secrets, or know-how, including but not limited to research, product plans, source code, software, customer lists, and financial documents, disclosed either directly or indirectly. The receiving party agrees to hold all Confidential Information in strict confidence and to limit access only to employees or representatives who need to know. The obligations of non-disclosure shall survive for a period of five (5) years from the date of disclosure. Any disputes arising out of this Agreement shall be governed by the laws of the State of Delaware, without regard to conflict of law principles.",
+    "metadata": {
+      "author": "Corporate Law Division",
+      "version": "1.4",
+      "confidentiality": "Strictly Confidential",
+      "practice_area": "Corporate"
+    }
+  },
+  {
+    "id": "doc_002",
+    "title": "Intellectual Property (IP) Assignment Clause",
+    "category": "Contracts & Agreements",
+    "content": "All inventions, improvements, designs, software codes, algorithms, formulas, and works of authorship created, written, or conceived by the Contractor, either solely or jointly with others, during the course of performing services for the Company, shall belong exclusively to the Company. The Contractor hereby irrevocably assigns, transfers, and conveys to the Company all worldwide rights, titles, and interests in and to such Intellectual Property, including all patents, copyrights, trademarks, and trade secrets associated therewith. The Contractor agrees to execute any documents and perform any actions reasonably requested by the Company to secure, register, and protect the Company's ownership of such Intellectual Property.",
+    "metadata": {
+      "author": "IP Specialist Group",
+      "version": "2.0",
+      "confidentiality": "Standard Confidential",
+      "practice_area": "Intellectual Property"
+    }
+  },
+  {
+    "id": "doc_003",
+    "title": "General Employment Termination Policy",
+    "category": "Employment Law",
+    "content": "Employment with the Company is 'at-will,' meaning that either the employee or the Company may terminate the employment relationship at any time, with or without cause, and with or without advance notice. Upon termination, whether voluntary or involuntary, the employee shall receive compensation for all hours worked up to the final day of employment, along with accrued but unused vacation time, in accordance with applicable state and local laws. All Company-owned property, including laptops, access keys, documents, and digital accounts, must be returned on or before the final working day. Severance packages are not guaranteed and are offered solely at the discretion of executive management, contingent upon the execution of a separation agreement and general release of claims.",
+    "metadata": {
+      "author": "Human Resources & Legal Counsel",
+      "version": "3.2",
+      "confidentiality": "Internal Use Only",
+      "practice_area": "Employment"
+    }
+  },
+  {
+    "id": "doc_004",
+    "title": "Website Privacy Policy & GDPR Compliance Guidelines",
+    "category": "Data Privacy & Compliance",
+    "content": "This Privacy Policy describes how we collect, use, and share personal information of visitors to our website. Under the General Data Protection Regulation (GDPR), users residing in the European Union are granted specific rights regarding their personal data, including: (1) The Right to Access: Users can request copies of their personal data collected by us. (2) The Right to Rectification: Users can request that we correct any information they believe is inaccurate. (3) The Right to Erasure ('Right to be Forgotten'): Users can request that we erase their personal data under certain conditions. We collect personal data such as names, email addresses, and IP addresses via cookies and sign-up forms. Data is stored securely using encryption protocols and is retained only as long as necessary to fulfill the purposes outlined in this policy.",
+    "metadata": {
+      "author": "Compliance Committee",
+      "version": "1.1",
+      "confidentiality": "Public Document",
+      "practice_area": "Technology & Privacy"
+    }
+  },
+  {
+    "id": "doc_005",
+    "title": "Litigation Support & Case Assessment Protocol",
+    "category": "Litigation",
+    "content": "Before filing a formal lawsuit in civil court, attorneys must conduct a comprehensive Case Assessment. This protocol involves: (1) Factual Investigation: Gathering all physical evidence, emails, records, and interviewing key witnesses. (2) Legal Research: Analyzing relevant statutes, case laws, and precedents to determine the viability of claims. (3) Jurisdiction Analysis: Identifying the correct forum (federal or state court) that has authority over the parties and the subject matter. (4) Statute of Limitations Check: Confirming that the filing deadline has not expired. Under federal rules, the standard statute of limitations for breach of contract claims is typically four (4) years, although this varies depending on the state where the action is brought.",
+    "metadata": {
+      "author": "Litigation Department",
+      "version": "2.1",
+      "confidentiality": "Attorney-Client Privileged",
+      "practice_area": "Litigation"
+    }
+  },
+  {
+    "id": "doc_006",
+    "title": "Commercial Real Estate Lease Agreement Guidelines",
+    "category": "Real Estate Law",
+    "content": "A commercial lease agreement is a legally binding contract between a landlord and a business tenant. Key provisions include: (1) Rent Structure: Triple Net (NNN) leases require the tenant to pay base rent plus their share of property taxes, building insurance, and maintenance costs. (2) Use Clause: Defines the permitted operations inside the premises to prevent conflicts with neighboring tenants. (3) Sublease Clause: States whether the tenant has the right to assign the lease or sublet the space to another business. (4) Alterations: Outlines the approvals required before a tenant can make structural modifications. Security deposits are typically higher for commercial leases than residential and are held to cover potential default or damages.",
+    "metadata": {
+      "author": "Real Estate Advisory",
+      "version": "1.0",
+      "confidentiality": "Standard Confidential",
+      "practice_area": "Real Estate"
+    }
+  },
+  {
+    "id": "doc_007",
+    "title": "Family Law Mediation & Divorce Settlement Process",
+    "category": "Family Law",
+    "content": "Mediation is a voluntary, confidential process where a neutral third-party mediator helps divorcing spouses reach an agreement on disputes such as child custody, division of marital assets, and spousal support. The mediator does not make decisions but facilitates discussion. If spouses reach an agreement, the mediator drafts a Memorandum of Understanding (MOU), which is then reviewed by the spouses' individual attorneys before being submitted to a family court judge for final approval. Assets are divided either under 'Equitable Distribution' rules (fair but not necessarily equal, applicable in most states) or 'Community Property' rules (strict 50/50 split of all assets acquired during marriage).",
+    "metadata": {
+      "author": "Family Law Practice",
+      "version": "2.5",
+      "confidentiality": "Highly Confidential",
+      "practice_area": "Family Law"
+    }
+  },
+  {
+    "id": "doc_008",
+    "title": "Criminal Law: Arrest Rights & Miranda Warnings",
+    "category": "Criminal Defense",
+    "content": "Under the Fifth and Sixth Amendments of the U.S. Constitution, individuals accused of a crime have fundamental protections during arrest and custodial interrogation. Law enforcement officers must read the Miranda Warnings if they intend to interrogate a suspect in custody. The warnings dictate that: (1) You have the right to remain silent. (2) Anything you say can and will be used against you in a court of law. (3) You have the right to talk to a lawyer and have them present during questioning. (4) If you cannot afford a lawyer, one will be appointed for you. If these warnings are not read before custodial interrogation, any statements made by the suspect may be ruled inadmissible in court under the 'exclusionary rule'.",
+    "metadata": {
+      "author": "Criminal Defense Division",
+      "version": "1.2",
+      "confidentiality": "Public Information",
+      "practice_area": "Criminal Law"
+    }
+  },
+  {
+    "id": "doc_009",
+    "title": "Mergers & Acquisitions (M&A) Due Diligence Checklist",
+    "category": "Corporate Law",
+    "content": "Due diligence is a comprehensive assessment conducted by a buyer to evaluate a target company's business, assets, capabilities, and financial performance before finalizing a merger or acquisition. Legal due diligence includes: (1) Corporate Records: Reviewing articles of incorporation, bylaws, and board meeting minutes. (2) Material Contracts: Analyzing customer/vendor agreements, active leases, and partnership pacts. (3) Litigation History: Examining past, pending, or threatened lawsuits. (4) Employee Benefits: Evaluating pension plans, stock options, and employment agreements. Discovering undisclosed liabilities or regulatory non-compliance during this phase can lead to price renegotiation or transaction cancellation.",
+    "metadata": {
+      "author": "M&A Advisory Group",
+      "version": "4.0",
+      "confidentiality": "Strictly Confidential",
+      "practice_area": "Corporate"
+    }
+  },
+  {
+    "id": "doc_010",
+    "title": "Medical Malpractice Liability Standard of Care",
+    "category": "Personal Injury & Torts",
+    "content": "To succeed in a medical malpractice lawsuit, a plaintiff must prove four core elements of negligence: (1) Duty of Care: A doctor-patient relationship existed, establishing a legal duty. (2) Breach of Duty: The medical professional deviated from the accepted 'standard of care'—defined as the level of care and skill that a reasonably competent health professional in the same specialty would provide under similar circumstances. (3) Causation: The breach directly caused the patient's injury or worsening condition. (4) Damages: The patient suffered actual physical, emotional, or financial harm. Expert medical witness testimony is almost always required to establish what the standard of care was and how it was breached.",
+    "metadata": {
+      "author": "Personal Injury Team",
+      "version": "1.5",
+      "confidentiality": "Attorney-Client Privileged",
+      "practice_area": "Personal Injury"
+    }
+  },
+  {
+    "id": "doc_011",
+    "title": "Corporate Compliance: Anti-Bribery & Corruption Policy",
+    "category": "Data Privacy & Compliance",
+    "content": "The Company is committed to conducting its business ethically and in compliance with all applicable anti-bribery and corruption laws, including the Foreign Corrupt Practices Act (FCPA) and the UK Bribery Act. Employees, agents, and representatives are strictly prohibited from offering, giving, soliciting, or receiving bribes, kickbacks, or facilitation payments to or from government officials or private commercial entities to secure an improper business advantage. Facilitation payments—small sums paid to lower-level officials to speed up routine administrative tasks—are also prohibited. Violations of this policy will lead to immediate disciplinary action, up to termination of employment, and may expose individuals to criminal prosecution.",
+    "metadata": {
+      "author": "Compliance Committee",
+      "version": "3.0",
+      "confidentiality": "Internal Use Only",
+      "practice_area": "Compliance"
+    }
+  },
+  {
+    "id": "doc_012",
+    "title": "Environmental Protection: Clean Water Act Compliance",
+    "category": "Environmental Law",
+    "content": "The Clean Water Act (CWA) regulates discharges of pollutants into the waters of the United States and sets quality standards for surface waters. Under the National Pollutant Discharge Elimination System (NPDES) program, industrial facilities, municipal wastewater systems, and certain agricultural operations must obtain a permit before discharging wastewater directly into surface waters. Permittees are required to monitor their effluent levels, implement Best Management Practices (BMPs) to control runoff, and submit regular Discharge Monitoring Reports (DMRs) to federal or state environmental protection agencies. Unauthorized discharges can result in civil fines exceeding $50,000 per day per violation and criminal prosecution.",
+    "metadata": {
+      "author": "Environmental Law Group",
+      "version": "2.2",
+      "confidentiality": "Public Document",
+      "practice_area": "Environmental"
+    }
+  },
+  {
+    "id": "doc_013",
+    "title": "Intellectual Property: Trademark Registration Process",
+    "category": "Contracts & Agreements",
+    "content": "A trademark protects brand names, logos, slogans, and designs that distinguish goods or services in the marketplace. To secure federal trademark protection in the United States, an applicant must file an application with the USPTO. The registration process includes: (1) Clearance Search: Checking existing databases to ensure the mark is not confusingly similar to an active mark. (2) Filing Basis: The application is filed either as 'Use in Commerce' (if already being used on products) or 'Intent to Use' (if planning to use it). (3) Examination: A USPTO examining attorney reviews the mark for conflicts or distinctiveness issues. (4) Publication: The mark is published in the Official Gazette, allowing others 30 days to file an opposition.",
+    "metadata": {
+      "author": "IP Specialist Group",
+      "version": "1.8",
+      "confidentiality": "Public Information",
+      "practice_area": "Intellectual Property"
+    }
+  },
+  {
+    "id": "doc_014",
+    "title": "Tax Law: Corporate Restructuring Tax Implications",
+    "category": "Corporate Law",
+    "content": "Under Section 368 of the Internal Revenue Code (IRC), certain corporate reorganizations may qualify as tax-free transactions if they meet strict statutory and judicial requirements. These requirements include: (1) Continuity of Interest (COI): The historical shareholders of the target company must retain a significant equity stake in the acquiring corporation. (2) Continuity of Business Enterprise (COBE): The acquiring corporation must either continue the target company's historic business or use a significant portion of its historic business assets in a business. (3) Business Purpose: The transaction must be motivated by a valid, non-tax business purpose. If these tests are failed, the transaction is treated as a fully taxable sale of assets or stock, triggering immediate capital gains liability.",
+    "metadata": {
+      "author": "Tax Advisory Group",
+      "version": "3.1",
+      "confidentiality": "Strictly Confidential",
+      "practice_area": "Corporate"
+    }
+  },
+  {
+    "id": "doc_015",
+    "title": "Employment Law: Fair Labor Standards Act (FLSA) Classification",
+    "category": "Employment Law",
+    "content": "The Fair Labor Standards Act (FLSA) establishes minimum wage, overtime pay, recordkeeping, and youth employment standards. Employers must correctly classify workers as either exempt or non-exempt from overtime requirements. Non-exempt employees are entitled to overtime pay of 1.5 times their regular hourly rate for all hours worked over 40 in a workweek. Exempt status is determined by three tests: (1) Salary Level Test: The employee must be paid at or above a minimum salary threshold. (2) Salary Basis Test: The employee must receive a predetermined, fixed salary. (3) Job Duties Test: The employee's primary duties must match administrative, professional, executive, computer, or outside sales roles as defined by FLSA regulations. Misclassification can result in back-pay claims, damages, and civil penalties.",
+    "metadata": {
+      "author": "Human Resources & Legal Counsel",
+      "version": "2.8",
+      "confidentiality": "Internal Use Only",
+      "practice_area": "Employment"
+    }
+  }
+]

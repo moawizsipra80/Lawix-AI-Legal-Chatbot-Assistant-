@@ -1,0 +1,11 @@
+As you know, I am a freelancer and I am looking for multiple projects related to Artificial Intelligence. For this purpose, I go on Upwork and search in this category.
+
+I have come to understand that most of the projects, not all but a large number of them, are related to AI-based chatbots, especially in the customer support chatbot category. So I further explored this area in depth.
+
+After researching, I found that many clients are looking for AI customer support chatbot assistants. I have also applied to multiple proposals, but unfortunately, I have not been able to get any orders yet.
+
+However, I believe it would be a good idea to build my own portfolio project, specifically an AI customer support chatbot, as a practical example. I can then showcase it in my portfolio so that when clients search for AI chatbot developers, my profile has a better chance of appearing in their search results, which may help me get more orders.
+
+Therefore, I would like your help in building a fully optimized AI customer chatbot assistant project. Not a basic version, but a complete, advanced, and production-level implementation that I can confidently present in my portfolio.
+
+Thank you.
