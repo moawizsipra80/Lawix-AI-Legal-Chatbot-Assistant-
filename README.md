@@ -1,4 +1,4 @@
-# Lawiz AI- Legal Assistant Chatbot
+# Lawix AI- Legal Assistant Chatbot
 
 A minimal, scalable starter for an AI customer chatbot built with:
 - **Python** (Flask backend API)
