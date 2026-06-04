@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Customer Chatbot Assistant</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="chat-wrapper">
+      <h1>AI Customer Chatbot Assistant</h1>
+      <p class="subtitle">Ask about shipping, returns, or support contact details.</p>
+
+      <section id="chatBox" class="chat-box" aria-live="polite"></section>
+
+      <form id="chatForm" class="chat-form">
+        <input
+          id="messageInput"
+          type="text"
+          placeholder="Type your question..."
+          autocomplete="off"
+          required
+        />
+        <button type="submit">Send</button>
+      </form>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
