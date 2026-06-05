@@ -36,7 +36,7 @@ class RAGEngine:
     def add_documents(self, docs: list):
         """Batch adds simple string documents (used for initialization/demos)."""
         for doc in docs:
-            # Check if this document already exists to prevent duplicate demo items
+            
             existing = self.get_all_documents()
             if not any(d["content"] == doc for d in existing):
                 self.add_document(doc)
@@ -55,7 +55,6 @@ class RAGEngine:
                         "title": metadata.get("title", "Untitled Document"),
                         "timestamp": metadata.get("timestamp", time.time())
                     })
-            # Sort by timestamp descending
             docs.sort(key=lambda x: x["timestamp"], reverse=True)
             return docs
         except Exception:

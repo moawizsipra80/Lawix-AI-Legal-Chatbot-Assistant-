@@ -141,7 +141,7 @@ async function loadSessionsList() {
             deleteBtn.classList.add("session-delete-btn");
             deleteBtn.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
             deleteBtn.addEventListener("click", async (e) => {
-                e.stopPropagation(); // Prevent clicking item to activate it
+                e.stopPropagation();
                 if (confirm("Are you sure you want to delete this chat session?")) {
                     await delete_session(session.session_id);
                 }
@@ -187,7 +187,8 @@ chatForm.addEventListener("submit", async function (event) {
     appendMessage(query, "user");
     userInput.value = "";
     
-    // Show typing loader
+   
+
     const typingBubble = appendTypingIndicator("Searching the document & generating response...");
 
     try {
@@ -236,8 +237,8 @@ fileinput.addEventListener("change",async(event)=>{
     if(!file)return;
     
     // Inline progress feedback
-    appendSystemMessage(`PDF uploaded successfully: "${file.name}"`);
-    const statusBubble = appendSystemMessage("Processing document and generating global crux summary...");
+    appendSystemMessage(`Uploading "${file.name}"...`);
+    const statusBubble = appendSystemMessage("Uploading file to server...");
 
     const formData=new FormData();
     formData.append("file",file);
@@ -248,18 +249,39 @@ fileinput.addEventListener("change",async(event)=>{
         });
         const result=await response.json();
         
-        if (statusBubble) statusBubble.remove();
-        
         if (result.error) {
-            appendSystemMessage(`Document processing failed: ${result.error}`);
-        } else {
-            appendSystemMessage(`Document processing completed. The AI has finished reading the document and is ready to answer questions.`);
+            statusBubble.remove();
+            appendSystemMessage(`Document upload failed: ${result.error}`);
+            fileinput.value = "";
+            return;
         }
+        
+        statusBubble.innerText = "PDF uploaded successfully. Processing document text & generating global summary...";
+        
+        // Poll status in the background
+        const pollInterval = setInterval(async () => {
+            try {
+                const statusRes = await fetch(`/upload/status/${encodeURIComponent(file.name)}`);
+                const statusData = await statusRes.json();
+                
+                if (statusData.status === "completed") {
+                    clearInterval(pollInterval);
+                    statusBubble.remove();
+                    appendSystemMessage(`Document processing completed. Aegis Legal AI has finished reading "${file.name}" (${statusData.details} segments) and is ready to answer questions.`);
+                } else if (statusData.status === "failed") {
+                    clearInterval(pollInterval);
+                    statusBubble.remove();
+                    appendSystemMessage(`Document processing failed: ${statusData.details}`);
+                }
+            } catch (pollErr) {
+                console.error("Polling error:", pollErr);
+            }
+        }, 1500);
     }
     catch(error){
-        if (statusBubble) statusBubble.remove();
+        statusBubble.remove();
         console.error("Error communicating with upload API:",error);
-        appendSystemMessage("Error: Failed to upload and process PDF.");
+        appendSystemMessage("Error: Failed to upload PDF.");
     }
     
     fileinput.value = ""; // Clear file selector
