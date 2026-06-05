@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AegisAI - Customer Support Chatbot</title>
+    <title>Aegis Legal AI - Law Firm Assistant</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,36 +16,62 @@
 </head>
 
 <body>
-    <div class="chat-container">
-        <div class="glow-bg"></div>
+    <div class="app-layout">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <h2>Aegis Legal AI</h2>
+            </div>
+            <button class="new-chat-btn" id="new-chat-btn">
+                <i class="fa-solid fa-plus"></i> New Chat
+            </button>
 
-        <header class="chat-header">
-            <div class="header-logo">
-                <i class="fa-solid fa-robot"></i>
-                <div>
-                    <h1>AegisAI</h1>
-                    <span class="status"><span class="pulse"></span> Online Support</span>
+            <div class="sessions-section">
+                <h3>Previous Chats</h3>
+                <div class="sessions-list" id="sessions-list">
+                    <!-- Session items inserted dynamically -->
                 </div>
             </div>
-        </header>
+        </aside>
 
-        <!-- Message Panel -->
-        <div class="message-area" id="message-area">
-            <div class="welcome-card">
-                <i class="fa-solid fa-comments"></i>
-                <h2>How can I help you today?</h2>
-                <p>I can answer questions regarding support policies, delivery times, and refund rules instantly using
-                    semantic vector search.</p>
+
+        <!-- Main Chat Area -->
+        <div class="chat-container">
+            <div class="glow-bg"></div>
+
+            <header class="chat-header">
+                <div class="header-logo">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    <div>
+                        <h1 id="active-chat-title">Aegis Legal AI</h1>
+                        <span class="status"><span class="pulse"></span> Law Firm Assistant</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Message Panel -->
+            <div class="message-area" id="message-area">
+                <div class="welcome-card">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    <h2>How can I help you today?</h2>
+                    <p>I can assist with questions regarding NDAs, intellectual property, GDPR compliance, and business
+                        litigation regulations using semantic vector search.</p>
+                </div>
             </div>
-        </div>
 
-        <!-- Input Form -->
-        <form class="input-form" id="chat-form">
-            <input type="text" id="user-input" placeholder="Type your query here..." autocomplete="off" required>
-            <button type="submit" class="send-btn">
-                <i class="fa-solid fa-paper-plane"></i>
-            </button>
-        </form>
+            <!-- Input Form -->
+            <form class="input-form" id="chat-form">
+                <label for="pdf-upload" class="upload-btn">
+                    <i class="fa-solid fa-paperclip"></i>
+                </label>
+                <input type="file" id="pdf-upload" accept=".pdf" style="display: none;">
+                <input type="text" id="user-input" placeholder="Type your query here..." autocomplete="off" required>
+                <button type="submit" class="send-btn">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
     </div>
 
     <script src="/static/app.js"></script>

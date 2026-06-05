@@ -4,26 +4,31 @@ import uuid
 
 class RAGEngine:
     def __init__(self):
-        # Store Chroma files inside db/chroma_storage
         self.client = chromadb.PersistentClient(path="./db/chroma_storage")
         self.collection = self.client.get_or_create_collection(
             name="support_docs"
         )
-        # Session memory for chat context (key: session_id, value: list of message dicts)
-        self.memory = {}
+        
+        self.chat_collection = self.client.get_or_create_collection(
+            name="chat_history"
+        )
 
-    def add_document(self, content: str, title: str = None) -> str:
+    def add_document(self, content: str, title: str = None, metadata_dict: dict = None) -> str:
         """Adds a single document with metadata to the vector storage."""
         doc_id = f"doc_{int(time.time())}_{uuid.uuid4().hex[:6]}"
         title = title or (content[:30] + "..." if len(content) > 30 else content)
         
+        meta = {
+            "title": title,
+            "timestamp": time.time(),
+            "content_length": len(content)
+        }
+        if metadata_dict:
+            meta.update(metadata_dict)
+        
         self.collection.add(
             documents=[content],
-            metadatas=[{
-                "title": title,
-                "timestamp": time.time(),
-                "content_length": len(content)
-            }],
+            metadatas=[meta],
             ids=[doc_id]
         )
         return doc_id
@@ -71,26 +76,86 @@ class RAGEngine:
                 query_texts=[query],
                 n_results=n_results
             )
-            # Flatten or format documents list
+            docs = []
             if results and results.get("documents") and len(results["documents"]) > 0:
-                return results["documents"][0]
-            return []
+                for i in range(len(results["documents"][0])):
+                    docs.append({
+                        "content": results["documents"][0][i],
+                        "metadata": results["metadatas"][0][i] if results.get("metadatas") else {}
+                    })
+            return docs
         except Exception:
             return []
 
-    # Simple session management for conversation memory
     def get_chat_history(self, session_id: str) -> list:
-        if session_id not in self.memory:
-            self.memory[session_id] = []
-        return self.memory[session_id]
+        try:
+            results = self.chat_collection.get(
+                where={"session_id": session_id}
+            )
+            messages = []
+            if results and results.get("ids"):
+                for i in range(len(results["ids"])):
+                    metadata = results["metadatas"][i]
+                    messages.append({
+                        "role": metadata["role"],
+                        "content": results["documents"][i],
+                        "timestamp": metadata["timestamp"]
+                    })
+            # Sort chronologically by timestamp
+            messages.sort(key=lambda x: x["timestamp"])
+            return messages
+        except Exception as e:
+            print(f"Error getting chat history: {e}")
+            return []
 
     def add_chat_message(self, session_id: str, role: str, content: str):
-        if session_id not in self.memory:
-            self.memory[session_id] = []
-        self.memory[session_id].append({"role": role, "content": content})
-        # Keep only the last 10 turns to avoid context overflow
-        if len(self.memory[session_id]) > 20:
-            self.memory[session_id] = self.memory[session_id][-20:]
+        try:
+            message_id = f"msg_{int(time.time() * 1000)}_{uuid.uuid4().hex[:4]}"
+            self.chat_collection.add(
+                documents=[content],
+                metadatas=[{
+                    "session_id": session_id,
+                    "role": role,
+                    "timestamp": time.time()
+                }],
+                ids=[message_id]
+            )
+        except Exception as e:
+            print(f"Error adding chat message: {e}")
 
     def clear_chat_history(self, session_id: str):
-        self.memory[session_id] = []
+        try:
+            self.chat_collection.delete(where={"session_id": session_id})
+        except Exception as e:
+            print(f"Error clearing chat history: {e}")
+
+    def get_all_sessions(self) -> list:
+        try:
+            results = self.chat_collection.get()
+            sessions = {}
+            if results and results.get("metadatas"):
+                for i in range(len(results["metadatas"])):
+                    meta = results["metadatas"][i]
+                    doc = results["documents"][i]
+                    sess_id = meta["session_id"]
+                    role = meta["role"]
+                    timestamp = meta["timestamp"]
+                    
+                    if sess_id not in sessions:
+                        sessions[sess_id] = {
+                            "session_id": sess_id,
+                            "first_message": "",
+                            "timestamp": timestamp
+                        }
+                    # We want the first message sent by the User as the title
+                    if role == "User" and (not sessions[sess_id]["first_message"] or timestamp < sessions[sess_id]["timestamp"]):
+                        sessions[sess_id]["first_message"] = doc
+                        sessions[sess_id]["timestamp"] = timestamp
+            
+            # Convert to list and sort by timestamp descending (newest first)
+            sess_list = list(sessions.values())
+            sess_list.sort(key=lambda x: x["timestamp"], reverse=True)
+            return sess_list
+        except Exception as e:
+            print(f"Error getting all sessions: {e}")
+            return []

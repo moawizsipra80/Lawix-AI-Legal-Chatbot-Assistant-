@@ -1,0 +1,11 @@
+# Environments
+.env
+.env.*
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# Local databases (ChromaDB)
+db/chroma_storage/
+**/db/chroma_storage/
