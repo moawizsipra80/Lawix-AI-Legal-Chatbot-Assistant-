@@ -1,6 +1,6 @@
 # Lawix AI- Legal Assistant Chatbot
-
-A minimal, scalable starter for an AI customer chatbot built with:
+ It is a Legal Chatbot assistant for lawyers in which lawyers upload their cases with the help of pdf and  the whole chatbot which uses chroma db stores and reads the all of the topics in the pdf and store  in the form of chunks in datbase.So,it is convinient for the lawyers to solve and all of the cases by reading it and answering and questioning from that chatbot. 
+A minimal, scalable starter for an Legal Chatbot Assistant  built with:
 - **Python** (Flask backend API)
 - **ChromaDB** (knowledge retrieval)
 - **HTML/CSS/JavaScript** (`app.js` frontend)
